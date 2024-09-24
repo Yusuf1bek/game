@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="icon" href="images/game-icon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-0 m-0">
+    <div class="text-white relative mt-[50px] m-auto w-[800px] h-[600px] bg-slate-500 rounded-[20px] shadow-md  p-10">
+        <div class="flex space-x-5 ">
+            <div class="w-[350px] h-[450px] text-center font-bold text-[20px] bg-green-500 rounded-[20px]">
+                <h1>Player1</h1>
+                <p class="mb-[30px] mt-[10px]">Score: <span id="score1">0</span></p>
+                <hr class="mb-[50px]">
+                <div>
+                    <h2 class="text-extrabold text-[50px] mb-[80px]" id="number1">0</h2>
+                    <button id="btn1"
+                        class="relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity p-[2px] bg-black rounded-[16px] bg-gradient-to-t from-[#8122b0] to-[#dc98fd] active:scale-95">
+                        <span
+                            class="w-full h-full flex items-center gap-2 px-8 py-3 bg-[#B931FC] text-white rounded-[14px] bg-gradient-to-t from-[#a62ce2] to-[#c045fc]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path
+                                    d="M8 13V9m-2 2h4m5-2v.001M18 12v.001m4-.334v5.243a3.09 3.09 0 0 1-5.854 1.382L16 18a3.618 3.618 0 0 0-3.236-2h-1.528c-1.37 0-2.623.774-3.236 2l-.146.292A3.09 3.09 0 0 1 2 16.91v-5.243A6.667 6.667 0 0 1 8.667 5h6.666A6.667 6.667 0 0 1 22 11.667Z">
+                                </path>
+                            </svg>Play</span>
+                    </button>
+                    <p id="turn1" class="mt-3 text-[18px] text-yellow-400"></p>
+                </div>
+            </div>
+            <div class="w-[350px] h-[450px] text-center font-bold text-[20px] bg-green-500 rounded-[20px]">
+                <h1>Player2</h1>
+                <p class="mb-[30px] mt-[10px]">Score: <span id="score2">0</span></p>
+                <hr class="mb-[50px]">
+                <div>
+                    <h2 class="text-extrabold text-[50px] mb-[80px]" id="number2">0</h2>
+                    <button id="btn2"
+                        class="relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity p-[2px] bg-black rounded-[16px] bg-gradient-to-t from-[#8122b0] to-[#dc98fd] active:scale-95">
+                        <span
+                            class="w-full h-full flex items-center gap-2 px-8 py-3 bg-[#B931FC] text-white rounded-[14px] bg-gradient-to-t from-[#a62ce2] to-[#c045fc]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path
+                                    d="M8 13V9m-2 2h4m5-2v.001M18 12v.001m4-.334v5.243a3.09 3.09 0 0 1-5.854 1.382L16 18a3.618 3.618 0 0 0-3.236-2h-1.528c-1.37 0-2.623.774-3.236 2l-.146.292A3.09 3.09 0 0 1 2 16.91v-5.243A6.667 6.667 0 0 1 8.667 5h6.666A6.667 6.667 0 0 1 22 11.667Z">
+                                </path>
+                            </svg>Play</span>
+                    </button>
+                    <p id="turn2" class="mt-3 text-[18px] text-yellow-400"></p>
+                </div>
+            </div>
+        </div>
+        <button id="restartBtn" class="mt-[20px] w-full cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
+        border-blue-600
+        border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+        active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">Restart
+        </button>
+    </div>
+    <div id="winnerModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p id="winnerMessage">Player X wins!</p>
+            <button id="closeModalButton">Restart</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
